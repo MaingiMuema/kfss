@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const display = Space_Grotesk({
-  subsets: ["latin"],
+const display = localFont({
+  src: "./fonts/GeistVF.woff",
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const body = Manrope({
-  subsets: ["latin"],
+const body = localFont({
+  src: "./fonts/GeistVF.woff",
   variable: "--font-body",
-  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "K.F.S.S. | Education For The AI Age",
+  title: "K.F.S.S. | Senior School for the AI Age",
   description:
-    "An immersive, AI-native education platform built for project-based learning, skill verification, and global collaboration.",
+    "A Kenya-aligned senior school model built around systems thinking, project-based learning, mentor teachers, personal AI assistants, and portfolio evidence.",
 };
 
 export default function RootLayout({
