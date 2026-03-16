@@ -1,159 +1,185 @@
-# Turborepo starter
+# K.F.S.S.
 
-This Turborepo starter is maintained by the Turborepo core team.
+Kenya Futurist School System is a future-facing school model and product vision designed to start at senior school level in Kenya. The goal is to work within the Competency-Based Education (CBE) framework while shifting learning toward systems thinking, project delivery, AI fluency, and visible portfolio evidence.
 
-## Using this example
+This repository currently houses the public-facing product concept site and supporting monorepo workspace used to shape, communicate, and evolve the KFSS model.
 
-Run the following command:
+## Vision
 
-```sh
-npx create-turbo@latest
+KFSS is built around a simple idea: students should learn by understanding real systems and improving them.
+
+The model starts in Grades 10-12 and is designed around:
+
+- free laptops for learners
+- mentor teachers who remain central to guidance and judgment
+- personal AI assistants that help students plan, reflect, recover, and build continuity
+- project-based learning tied to real briefs and public problems
+- systems thinking as a core habit, not an optional extra
+- portfolios, demos, reflections, and contribution trails as primary evidence of growth
+- final-year pathways that lead either to venture creation or contribution to existing ecosystem projects
+- long-term expansion into university-level learning focused on scale, operations, and advanced systems design
+
+## How The Model Works
+
+### 1. Senior school starting point
+
+KFSS begins at senior school level and is meant to fit inside the official CBE pathway structure rather than replace it. Students still move through formal pathway learning, but the delivery model becomes more applied, technology-enabled, and future-ready.
+
+### 2. Mentor plus AI support loop
+
+Each learner is supported by:
+
+- a laptop as the daily tool for research, building, and submission
+- a mentor teacher for coaching, review, and human accountability
+- a personal AI layer that learns the student over time and helps with planning, revision, feedback, and progress awareness
+
+### 3. Project-centered learning
+
+Theory remains important, but it is tied to projects, studios, and real-world briefs. Students do not only study isolated facts. They learn to map causes, constraints, incentives, feedback loops, and trade-offs across real systems.
+
+### 4. Portfolio-first evidence
+
+The model shifts emphasis away from certificates alone and toward visible proof of capability. Students graduate with a body of work that shows what they built, how they worked, how they reasoned, and what impact they created.
+
+### 5. Final-year impact routes
+
+In the final year, students are expected to take one of two directions:
+
+- build a startup or business solution around a real problem, using AI where useful
+- contribute to an existing system project inside the KFSS ecosystem, especially projects that improve Kenyan education, health, agriculture, civic systems, productivity, or public services
+
+The intention is that student work should not end as school-only output. It should feed back into society.
+
+## Why KFSS Exists
+
+The system is built for a world where:
+
+- routine knowledge work is increasingly automated
+- students need stronger judgment, adaptability, and systems reasoning
+- AI access should become more affordable and useful to Kenyan learners
+- schools should produce builders, contributors, and problem-solvers, not only exam takers
+
+KFSS is also designed around the belief that school infrastructure can become a force for public good. With the right guidance, tooling, and safeguards, learners can help improve real systems while growing their own capability, portfolios, and career pathways.
+
+## Access And Sustainability
+
+KFSS aims to keep access as affordable as possible for Kenyan students. The broad operating idea combines:
+
+- government support
+- donations and sponsorship
+- small parent contributions where needed
+- shared school AI infrastructure to reduce per-student cost
+
+The long-term access goal is to make useful AI support subsidized and widely available rather than premium-only.
+
+## Current Product Focus
+
+At the moment, this repository is focused on the concept and communication layer for the system, especially:
+
+- the public landing page experience
+- the visual and narrative expression of the KFSS model
+- immersive UI/UX concepts for explaining the school system
+- reusable workspace foundations for future expansion
+
+This repo is not yet a full student platform, learning operating system, or school management stack. It is the current foundation for that broader direction.
+
+## Workspace Structure
+
+```text
+apps/
+  docs/   Next.js docs app
+  web/    Next.js public-facing landing page
+
+packages/
+  eslint-config/
+  typescript-config/
+  ui/
 ```
 
-## What's inside?
+## Tech Stack
 
-This Turborepo includes the following packages/apps:
+- Turborepo
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- GSAP
+- Remotion Player
+- pnpm workspaces
 
-### Apps and Packages
+## Getting Started
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### Requirements
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- Node.js 18 or newer
+- pnpm 9
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+### Install
 
 ```sh
-cd my-turborepo
-turbo build
+pnpm install
 ```
 
-Without global `turbo`, use your package manager:
+### Run the workspace
 
 ```sh
-cd my-turborepo
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+pnpm dev
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+This starts the apps through Turborepo.
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+### Run only the landing page
 
 ```sh
-turbo build --filter=docs
+pnpm --filter web dev
 ```
 
-Without global `turbo`:
+Open [http://localhost:3000](http://localhost:3000).
+
+### Run only the docs app
 
 ```sh
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
+pnpm --filter docs dev
 ```
 
-### Develop
+Open [http://localhost:3001](http://localhost:3001).
 
-To develop all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+## Common Commands
 
 ```sh
-cd my-turborepo
-turbo dev
+pnpm dev
+pnpm build
+pnpm lint
+pnpm check-types
 ```
 
-Without global `turbo`, use your package manager:
+Target a single app when needed:
 
 ```sh
-cd my-turborepo
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+pnpm --filter web build
+pnpm --filter web lint
+pnpm --filter web check-types
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+## Guiding Principles
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+- Teachers stay central. AI assists; it does not replace human mentorship.
+- Students should learn systems by improving them.
+- Public problem solving matters more than passive content consumption.
+- Evidence of work should be visible, practical, and explainable.
+- Access matters. AI should become cheaper and more useful to Kenyan learners over time.
+- The model should be able to grow from senior school into university-level pathways.
 
-```sh
-turbo dev --filter=web
-```
+## Near-Term Direction
 
-Without global `turbo`:
+Near-term work in this repo is likely to focus on:
 
-```sh
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
+- refining the public narrative of KFSS
+- expanding the landing page into a stronger system showcase
+- documenting the learning model more clearly
+- shaping future product surfaces for learners, mentors, portfolios, and project ecosystems
 
-### Remote Caching
+## License
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+No license has been added yet.
